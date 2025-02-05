@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>onmousemove vs onmouseout</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            border: 2px solid black;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">Move your mouse here</div>
+    <p id="message"></p>
+
+    <script>
+        let box = document.getElementById("box");
+        let message = document.getElementById("message");
+
+        box.onmousemove = function () {
+            box.textContent = "Mouse is moving inside!";
+            box.style.backgroundColor = "lightgreen";
+        };
+
+        box.onmouseout = function () {
+            box.textContent = "Mouse left the box!";
+            box.style.backgroundColor = "lightcoral";
+        };
+    </script>
+
+</body>
+
+</html>

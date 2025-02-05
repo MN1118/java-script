@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Array Elements Display</title>
+</head>
+
+<body>
+
+  <h3>Array Elements:</h3>
+  <ul id="arrayList"></ul>
+
+  <script>
+    const myArray = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+
+    const listElement = document.getElementById('arrayList');
+
+    myArray.forEach(function (element) {
+      const listItem = document.createElement('li');
+      listItem.textContent = element;
+      listElement.appendChild(listItem);
+    });
+  </script>
+
+</body>
+
+</html>
